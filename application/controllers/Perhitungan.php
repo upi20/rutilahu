@@ -10,7 +10,7 @@ class Perhitungan extends CI_Controller
 		parent::__construct();
 		$this->load->library('pagination');
 		$this->load->library('form_validation');
-		$this->load->model('perhitungan_model');
+		$this->load->model('Perhitungan_model');
 		$this->load->model('Kriteria_model');
 	}
 
