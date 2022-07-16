@@ -10,7 +10,7 @@ class Perhitungan extends CI_Controller
 		parent::__construct();
 		$this->load->library('pagination');
 		$this->load->library('form_validation');
-		$this->load->model('Perhitungan_model');
+		$this->load->model('perhitungan_model');
 		$this->load->model('Kriteria_model');
 	}
 
@@ -49,7 +49,7 @@ class Perhitungan extends CI_Controller
 		$var_rumus .= $rumus2;
 
 		$data['rumus'] = $var_rumus;
-		$this->load->view('Perhitungan/perhitungan', $data);
+		$this->load->view('perhitungan/perhitungan', $data);
 	}
 
 
@@ -87,7 +87,7 @@ class Perhitungan extends CI_Controller
 			'level_id' => $this->session->userdata('id_user_level')
 		];
 
-		$this->load->view('Perhitungan/hasil', $data);
+		$this->load->view('perhitungan/hasil', $data);
 	}
 
 
@@ -127,12 +127,12 @@ class Perhitungan extends CI_Controller
 	public function publish()
 	{
 		$this->Perhitungan_model->publish(1);
-		redirect(base_url('Perhitungan/hasil'));
+		redirect(base_url('perhitungan/hasil'));
 	}
 
 	public function unpublish()
 	{
 		$this->Perhitungan_model->publish(0);
-		redirect(base_url('Perhitungan/hasil'));
+		redirect(base_url('perhitungan/hasil'));
 	}
 }
