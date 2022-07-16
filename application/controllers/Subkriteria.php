@@ -53,7 +53,7 @@ class Subkriteria extends CI_Controller
                           <span aria-hidden="true">&times;</span>
                         </button>
                         </div>');
-				redirect('sub_kriteria');
+				redirect('kubkriteria');
 			}
 		} else {
 			$this->session->set_flashdata('message', '<div class="alert alert-danger alert-dismissible fade show" role="alert">
@@ -62,7 +62,7 @@ class Subkriteria extends CI_Controller
                       <span aria-hidden="true">&times;</span>
                     </button>
                     </div>');
-			redirect('sub_kriteria/create');
+			redirect('kubkriteria/create');
 		}
 	}
 
@@ -83,7 +83,7 @@ class Subkriteria extends CI_Controller
               <span aria-hidden="true">&times;</span>
             </button>
             </div>');
-		redirect('sub_kriteria');
+		redirect('kubkriteria');
 	}
 
 	public function destroy($id_sub_kriteria)
@@ -95,6 +95,6 @@ class Subkriteria extends CI_Controller
               <span aria-hidden="true">&times;</span>
             </button>
             </div>');
-		redirect('sub_kriteria');
+		redirect('kubkriteria');
 	}
 }
