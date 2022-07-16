@@ -10,7 +10,7 @@ class Subkriteria extends CI_Controller
 		parent::__construct();
 		$this->load->library('pagination');
 		$this->load->library('form_validation');
-		$this->load->model('Sub_Kriteria_model');
+		$this->load->model('Subkriteria_model');
 
 		if ($this->session->userdata('id_user_level') != "1") {
 
@@ -22,10 +22,10 @@ class Subkriteria extends CI_Controller
 	{
 		$data = [
 			'page' => "Sub Kriteria",
-			'list' => $this->Sub_Kriteria_model->tampil(),
-			'kriteria' => $this->Sub_Kriteria_model->get_kriteria(),
-			'count_kriteria' => $this->Sub_Kriteria_model->count_kriteria(),
-			'sub_kriteria' => $this->Sub_Kriteria_model->tampil()
+			'list' => $this->Subkriteria_model->tampil(),
+			'kriteria' => $this->Subkriteria_model->get_kriteria(),
+			'count_kriteria' => $this->Subkriteria_model->count_kriteria(),
+			'sub_kriteria' => $this->Subkriteria_model->tampil()
 
 		];
 		$this->load->view('sub_kriteria/index', $data);
@@ -45,7 +45,7 @@ class Subkriteria extends CI_Controller
 		$this->form_validation->set_rules('nilai', 'Nilai', 'required');
 
 		if ($this->form_validation->run() != false) {
-			$result = $this->Sub_Kriteria_model->insert($data);
+			$result = $this->Subkriteria_model->insert($data);
 			if ($result) {
 				$this->session->set_flashdata('message', '<div class="alert alert-success alert-dismissible fade show" role="alert">
                         Data berhasil disimpan!
@@ -76,7 +76,7 @@ class Subkriteria extends CI_Controller
 			'nilai' => $this->input->post('nilai')
 		);
 
-		$this->Sub_Kriteria_model->update($id_sub_kriteria, $data);
+		$this->Subkriteria_model->update($id_sub_kriteria, $data);
 		$this->session->set_flashdata('message', '<div class="alert alert-success alert-dismissible fade show" role="alert">
             Data berhasil diupdate!
             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
@@ -88,7 +88,7 @@ class Subkriteria extends CI_Controller
 
 	public function destroy($id_sub_kriteria)
 	{
-		$this->Sub_Kriteria_model->delete($id_sub_kriteria);
+		$this->Subkriteria_model->delete($id_sub_kriteria);
 		$this->session->set_flashdata('message', '<div class="alert alert-success alert-dismissible fade show" role="alert">
             Data berhasil dihapus!
             <button type="button" class="close" data-dismiss="alert" aria-label="Close">

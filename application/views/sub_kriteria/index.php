@@ -69,7 +69,7 @@
 					</thead>
 					<tbody>
 						<?php
-						$sub_kriteria1 = $this->Sub_Kriteria_model->data_sub_kriteria($key->id_kriteria);
+						$sub_kriteria1 = $this->Subkriteria_model->data_sub_kriteria($key->id_kriteria);
 						$no = 1;
 						foreach ($sub_kriteria1 as $key) :
 						?>
