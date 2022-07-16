@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 16 Jul 2022 pada 10.29
+-- Waktu pembuatan: 16 Jul 2022 pada 10.32
 -- Versi server: 10.4.24-MariaDB
 -- Versi PHP: 7.4.29
 
@@ -38,10 +38,10 @@ CREATE TABLE `alternatif` (
 INSERT INTO `alternatif` (`id_alternatif`, `id_dusun`, `nik`, `nama`, `jenis_kelamin`, `alamat`, `no_telp`) VALUES
 (1, 5, '320552109990001', 'Ujang', 'Laki-laki', 'Kp. Narongtong rt 02 rw 04 ', '083836452943'),
 (2, 5, '320552109990002', 'Hamid', 'Laki-laki', 'Kp. barujaya mekar rt 02 rw 02', '083836452900'),
-(3, NULL, '320552109990003', 'Jajang', 'Laki-laki', 'Kp. Negrasari rt 04 rw 02', '0863245766'),
-(4, NULL, '320552109990004', 'Manap', 'Perempuan', 'Kp. Bayubud rt 01 rw 02', '097654445667'),
-(13, NULL, '320552109990005', 'Ajis', 'Laki-laki', 'Kp. Halimpu rt 03 rw 02\r\n', '081383772377'),
-(20, NULL, '1111', 'test', 'Laki-laki', 'test', '00'),
+(3, 5, '320552109990003', 'Jajang', 'Laki-laki', 'Kp. Negrasari rt 04 rw 02', '0863245766'),
+(4, 5, '320552109990004', 'Manap', 'Perempuan', 'Kp. Bayubud rt 01 rw 02', '097654445667'),
+(13, 5, '320552109990005', 'Ajis', 'Laki-laki', 'Kp. Halimpu rt 03 rw 02\r\n', '081383772377'),
+(20, 5, '1111', 'test', 'Laki-laki', 'test', '00'),
 (21, 5, '123', 'tes', 'Laki-laki', '1', '1'),
 (22, 7, '222', 'kep2 dusun', 'Laki-laki', 'leng', '12'),
 (23, 8, '111111', 'tes', 'Laki-laki', '1', '1'),
